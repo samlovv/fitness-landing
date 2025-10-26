@@ -14,13 +14,13 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover opacity-30"
       >
         <source
-          src="https://videos.pexels.com/video-files/4753772/4753772-uhd_2560_1440_24fps.mp4"
+          src="/videos/fitness-background.mp4"
           type="video/mp4"
         />
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/60 to-black/90" />
 
       {/* Content */}
       <motion.div
