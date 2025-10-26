@@ -67,9 +67,9 @@ export default function Programlar() {
                   {program.title}
                 </h3>
                 <p className="text-gray-400 mb-4">{program.desc}</p>
-                <button className="px-6 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition">
+                <Link href={program.href} className="px-6 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition">
                   Detaylı Bilgi
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}
