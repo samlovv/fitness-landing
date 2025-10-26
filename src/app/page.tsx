@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="font-[Poppins] bg-black">
+    <main className=" bg-black">
       <Hero />
       <About />
       <Programlar />
