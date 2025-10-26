@@ -89,6 +89,13 @@ export default function Fiyatlar() {
               </ul>
 
               <button
+
+                onClick={() => {
+              const el = document.getElementById("iletisim");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+
+
                 className={`w-full py-3 rounded-full font-semibold transition ${
                   plan.popular
                     ? "bg-red-500 hover:bg-red-600 text-white"

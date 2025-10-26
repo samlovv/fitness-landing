@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Programlar() {
@@ -9,21 +10,24 @@ export default function Programlar() {
       title: "Kuvvet Antrenmanı",
       desc: "Kas kütleni artır, dayanıklılığını geliştir ve limitlerini zorla.",
       img: "/photo/1.jpg",
+      href: "workouts/strength-training",
     },
     {
       title: "Kardiyo & Yağ Yakımı",
       desc: "Yağ oranını düşür, kalp sağlığını koru ve formda kal.",
       img: "/photo/3.jpg",
+      href: "workouts/cardio-fat-loss",
     },
     {
       title: "Esneklik & Yoga",
       desc: "Zihnini sakinleştir, stresi azalt ve esnekliğini artır.",
       img: "/photo/2.jpg",
+      href: "workouts/flexibility-yoga",
     },
   ];
 
   return (
-    <section id="programlar" className="py-24 bg-linear-to-b from-neutral-900 to-black text-white">
+    <section id="programs" className="py-24 bg-linear-to-b from-neutral-900 to-black text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

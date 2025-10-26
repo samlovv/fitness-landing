@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative bg-black text-white min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative bg-black text-white min-h-svh flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Background video */}
       <video
         autoPlay
@@ -27,19 +27,28 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 text-center px-4"
+        className="relative z-10 text-center w-full max-w-4xl mx-auto py-8 sm:py-12 lg:py-16"
       >
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
           Kendini Baştan Yarat.
         </h1>
-        <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg">
+        <p className="text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
           Kişisel antrenman planın, beslenme rehberin ve motivasyonun tek bir yerde.
         </p>
-        <div className="flex justify-center gap-4">
-          <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-semibold transition">
+        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 max-w-md mx-auto sm:max-w-none">
+          <button onClick={() => {
+              const el = document.getElementById("iletisim");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }} className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold transition-all text-sm sm:text-base">
             Ücretsiz Denemeye Başla
           </button>
-          <button className="border border-gray-400 hover:border-white px-6 py-3 rounded-xl font-semibold transition">
+          <button
+            className="w-full sm:w-auto border border-gray-400 hover:border-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold transition-all text-sm sm:text-base"
+            onClick={() => {
+              const el = document.getElementById("programs");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             Programları Gör
           </button>
         </div>
